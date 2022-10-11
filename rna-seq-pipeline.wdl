@@ -66,8 +66,8 @@ workflow rna {
     scatter (i in range(length(fastqs_R1))) {
         call align { input:
             endedness=endedness,
-            fastqs_R1=fastqs_R1[i],
-            fastqs_R2=fastqs_R2_[i],
+            fastqs_R1=fastqs_R1,
+            fastqs_R2=fastqs_R2_,
             index=align_index,
             bamroot="rep"+(i+1)+bamroot,
             ncpus=align_ncpus,
