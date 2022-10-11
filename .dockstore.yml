@@ -1,6 +1,6 @@
 version: 1.2
 workflows:
-   - name: "CHIP-seq"
+   - name: "RNA-seq"
      subclass: WDL
      primaryDescriptorPath: /rna-seq-pipeline.wdl
      filters:  # Only develop or master branches and localAligner/** tags
