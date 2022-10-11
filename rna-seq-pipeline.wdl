@@ -116,8 +116,8 @@ workflow rna {
           Float? kallisto_sd = if (length(kallisto_sd_of_fragment_length) > 0) then kallisto_sd_of_fragment_length[i] else kallisto_sd_undefined
           Int? kallisto_fl = if (length(kallisto_fragment_length) > 0) then kallisto_fragment_length[i] else kallisto_fragment_length_undefined
           call kallisto { input:
-              fastqs_R1=fastqs_R1[i],
-              fastqs_R2=fastqs_R2_[i],
+              fastqs_R1=fastqs_R1,
+              fastqs_R2=fastqs_R2_,
               endedness=endedness,
               strandedness_direction=strandedness_direction,
               kallisto_index=select_first([kallisto_index]),
