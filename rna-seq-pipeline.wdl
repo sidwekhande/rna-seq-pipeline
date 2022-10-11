@@ -33,7 +33,7 @@ workflow rna {
         # index: aligner index archive (tar.gz)
         File align_index
         Int align_ncpus
-        Int? align_ramGB
+        Int align_ramGB
         String? align_disk
         Int? kallisto_number_of_threads
         Int? kallisto_ramGB
